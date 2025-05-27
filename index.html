@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release Date Reminder - Chrome Extension</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📅 Release Date Reminder</h1>
+        <p>Never miss a release date for your favorite videos, games, movies, and more!</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About the Extension</h2>
+            <p>
+                Release Date Reminder is a handy Chrome extension designed to help you quickly extract
+                release dates mentioned on web pages, especially from video descriptions or articles.
+                Once a date is found, you can easily create a Google Calendar event to remind yourself.
+            </p>
+        </section>
+
+        <section id="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Extracts release dates from YouTube video descriptions and other web pages.</li>
+                <li>Context menu option to extract dates from selected text.</li>
+                <li>Automatically attempts to expand YouTube video descriptions for better extraction.</li>
+                <li>Allows manual adjustment of the extracted date.</li>
+                <li>One-click creation of Google Calendar events for reminders.</li>
+                <li>Simple and intuitive interface.</li>
+            </ul>
+        </section>
+
+        <section id="get-extension">
+            <h2>Get the Extension</h2>
+            <p>Install Release Date Reminder from the Chrome Web Store and start managing your reminders today!</p>
+            <a href="CHROME_WEB_STORE_LINK_HERE" class="cta-button" target="_blank" rel="noopener noreferrer">Install from Chrome Web Store</a>
+            <p class="note">(Link will be active once the extension is published)</p>
+        </section>
+
+        <section id="source-code">
+            <h2>Source Code & Contributions</h2>
+            <p>
+                This extension is open source! You can view the code, report issues, or contribute
+                on GitHub.
+            </p>
+            <a href="GITHUB_REPOSITORY_LINK_HERE" class="cta-button github" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p>&copy; <span id="currentYear"></span> Swayam Bhageria . All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

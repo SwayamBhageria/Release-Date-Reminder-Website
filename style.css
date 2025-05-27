@@ -1,0 +1,163 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #4A90E2; /* A nice blue */
+    color: white;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em 2em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 2.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #2c3e50; /* Darker blue/grey */
+    margin-top: 0;
+    font-size: 1.8em;
+    border-bottom: 2px solid #4A90E2;
+    padding-bottom: 0.3em;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #5cb85c; /* Green for primary CTA */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #4cae4c; /* Darker green */
+}
+
+.cta-button.github {
+    background-color: #333; /* Dark grey/black for GitHub */
+}
+
+.cta-button.github:hover {
+    background-color: #222;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #34495e; /* Dark footer */
+    color: #ecf0f1; /* Light text for dark footer */
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0.3em 0;
+}
+
+footer a {
+    color: #9ad3de; /* Light blue link for footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Privacy Page Specific */
+.privacy-content h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #ddd; /* Subtler underline for privacy headings */
+    display: block; /* Make H2s full width for privacy policy */
+    margin-top: 1.5em;
+}
+
+.privacy-content p, .privacy-content ul li {
+    margin-bottom: 1em;
+    color: #555;
+}
+
+.privacy-content strong {
+    color: #333;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2em;
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    main {
+        margin: 1em;
+        padding: 1em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}

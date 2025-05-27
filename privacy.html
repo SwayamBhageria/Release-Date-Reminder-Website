@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Release Date Reminder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Privacy Policy for Release Date Reminder</h1>
+    </header>
+
+    <main class="privacy-content">
+        <p><strong>Last Updated:</strong> May 28, 2025</p> <h2>1. Introduction</h2>
+        <p>
+            Welcome to the Release Date Reminder Chrome Extension ("Extension"). This Privacy Policy explains how we handle
+            information when you use our Extension. Your privacy is important to us.
+        </p>
+
+        <h2>2. Information We Collect and Use</h2>
+        <p>
+            The Release Date Reminder extension requires authorization to access your Google Calendar to create calendar
+            events for release dates you identify and choose to save.
+        </p>
+        <ul>
+            <li>
+                <strong>Google Calendar Access (OAuth):</strong> We use Google's authentication (OAuth) services via the
+                `chrome.identity` API to gain temporary, specific access to your Google Calendar. This access is
+                solely for the purpose of creating new calendar events as initiated by you through the Extension.
+                The Extension requests the `https://www.googleapis.com/auth/calendar.events` scope, which allows
+                it to create events but not read or modify existing unrelated events.
+            </li>
+            <li>
+                <strong>Extracted Information:</strong> The title and release date information extracted from web pages
+                (like YouTube descriptions or selected text) or manually entered by you are used only to populate
+                the details of the calendar event being created in your Google Calendar. This information is processed
+                locally within the extension and sent to the Google Calendar API as part of the event creation request.
+            </li>
+        </ul>
+        <p>
+            <strong>The Extension itself does not collect, store, track, or transmit any of your personal information,
+            Browse history, or your Google Calendar data to any external servers or third parties, other than the
+            direct interaction with Google's APIs as described for authentication and event creation.</strong>
+        </p>
+
+        <h2>3. How Information is Handled</h2>
+        <ul>
+            <li>
+                <strong>Local Processing:</strong> Date and title extraction from web pages occurs locally within your browser.
+            </li>
+            <li>
+                <strong>Event Creation:</strong> When you choose to create a calendar reminder, the extracted title and date,
+                along with your authorization token, are sent directly to Google's Calendar API to create the event in
+                the primary calendar associated with the Google account you authorize.
+            </li>
+            <li>
+                <strong>No Data Storage by the Extension:</strong> The extension does not store your OAuth token, calendar data,
+                extracted dates, or titles persistently. Information is held in memory only for the duration of the
+                current operation (e.g., creating an event). Once the popup is closed or the operation is complete,
+                this temporary information is discarded.
+            </li>
+        </ul>
+
+        <h2>4. Permissions Requested</h2>
+        <p>The Extension requests the following permissions, as defined in its `manifest.json` file:</p>
+        <ul>
+            <li>
+                <strong>`identity`</strong>: Used to obtain an OAuth 2.0 access token via `chrome.identity.getAuthToken()`.
+                This token allows the Extension to securely authenticate you with Google services and authorize access
+                to your Google Calendar for event creation on your behalf.
+            </li>
+            <li>
+                <strong>`scripting`</strong>: Used to inject the content script (`content.js`) into web pages (like YouTube)
+                to analyze the page content for release dates and to enable the "Extract Release Date" functionality.
+            </li>
+            <li>
+                <strong>`activeTab`</strong>: Allows the extension to access the content of the currently active tab when
+                the user invokes the extension (e.g., clicks the extension icon or uses a context menu). This is used
+                to read page content for date extraction.
+            </li>
+            <li>
+                <strong>`storage`</strong>: (If you plan to add settings in the future, otherwise remove or clarify if not used).
+                Currently, the core functionality described does not actively use `chrome.storage` for user data.
+                If settings are added, this permission would be used to save user preferences locally.
+            </li>
+             <li>
+                <strong>`https://www.googleapis.com/*`</strong>: (Host permission) Required to allow the Extension to make
+                API calls to the Google Calendar API (which resides on `www.googleapis.com`) for creating calendar events.
+            </li>
+             <li>
+                <strong>Host permissions for specific sites (e.g., `*://*.youtube.com/*`)</strong>:
+                 (If you used more specific host permissions instead of just `activeTab` for content scripts on certain sites).
+                 The current manifest uses broad host permissions for content script injection for wider compatibility or specific user-agent string matches in `host_permissions`. These allow the content script to run on those pages to extract release dates.
+                 *(Review your manifest for actual host permissions if they differ from the example provided, and list them accurately).*
+            </li>
+        </ul>
+
+        <h2>5. Third-Party Services</h2>
+        <p>
+            The Extension interacts directly with Google's services (Google Identity Platform for authentication and
+            Google Calendar API for event creation). Your interaction with these services is also governed by Google's
+            Privacy Policy and Terms of Service.
+        </p>
+
+        <h2>6. Security</h2>
+        <p>
+            We take reasonable precautions to protect your information. Authentication with Google is handled via
+            secure OAuth 2.0 protocols. The extension does not store sensitive information like your password
+            or permanent access tokens.
+        </p>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>
+            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new
+            Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy
+            Policy periodically for any changes.
+        </p>
+
+        <h2>8. Contact Us</h2>
+        <p>
+            If you have any questions about this Privacy Policy, or suggestions for the extension, please contact us:
+        </p>
+        <p>
+            [Your Name or Extension Name]<br>
+            Email: [Your Support Email Address]<br>
+            GitHub Issues Page: [Link to Your GitHub Repository Issues Page]
+        </p>
+        <p><a href="index.html" class="back-link">&larr; Back to Home</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Your Name / Your Extension Name. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
